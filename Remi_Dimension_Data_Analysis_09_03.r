@@ -68,7 +68,6 @@ my_data
 my_dataSub <- my_data[ , c("D1S1T",	"SelfRT",	"DIMT", "subIDT")]
 
 
-# the factor are already defined but R needs to know them so we tell him ^^
 
 my_data$grp <- factor(my_data$SelfR, levels = c(1,2,3), labels = c("S1","S2", "S3"))
 my_data$param <- factor(my_data$DIM, levels = c(1,2,3,4), labels = c("DIM1","DIM2","DIM3","DIM4"))
@@ -1505,14 +1504,10 @@ Dimension4 <- my_data$D4
 
 
 # Forest plot move 0 
-# Load required
-
 install.packages("forestplot")
 library(lme4)
 library(ggplot2)
 library(forestplot)
-
-# Load required packages
 library(lme4)
 library(ggplot2)
 
